@@ -23,7 +23,7 @@ public class StatsService {
     }
     
     /* mostrarEstadisticas y mostrarAsistentes ahoran son metodos de la clase
-    y usan los atributos de la misma clae */
+    y usan los atributos de la misma clase */
     public void mostrarEstadisticas() {
         System.out.println("\n=== ESTADÍSTICAS DE LA TRANSMISIÓN ===");
         System.out.println("Título: " + tituloTransmision);

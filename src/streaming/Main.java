@@ -17,7 +17,9 @@ public class Main {
 
         // Crear transmisión
         Transmision transmision = new Transmision("Clase de Paradigmas de Programación", profesora);
-        
+        // Crear Estadisticas de Transmision
+        StatsService estadisticasTransmision = new StatsService(transmision);
+
         // Registrar listeners (componentes)
         transmision.agregarListener(new ChatComponent());
         transmision.agregarListener(new AttendanceComponent());
@@ -43,7 +45,7 @@ public class Main {
         
         // Mostrar estadísticas usando Stream API
         System.out.println();
-        StatsService.mostrarEstadisticas(transmision);
+        estadisticasTransmision.mostrarEstadisticas();
         
         // Filtrar y mostrar solo estudiantes
         System.out.println();

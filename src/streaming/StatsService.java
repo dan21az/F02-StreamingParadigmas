@@ -22,8 +22,8 @@ public class StatsService {
         this.totalMensajesTransmision = transmision.getMensajes();
     }
     
-    /* mostrarEstadisticas y mostrarAsistentes ahoran son metodos de la clase
-    y usan los atributos de la misma clase */
+    /*mostrarEstadisticas y mostrarAsistentes ahoran son metodos de la clase
+    y usan los atributos de la misma clase*/
     public void mostrarEstadisticas() {
         System.out.println("\n=== ESTADÍSTICAS DE LA TRANSMISIÓN ===");
         System.out.println("Título: " + tituloTransmision);

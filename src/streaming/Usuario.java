@@ -26,4 +26,11 @@ class Usuario {
         return rol;
     }
 
+    public boolean esEstudiante() {
+        if(this.rol == "estudiante"){
+            return true;
+        }
+        return false;
+    }
+
 }

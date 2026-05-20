@@ -76,4 +76,28 @@ public class Transmision {
             System.out.println("[EVENTO] Transmisión finalizada");
         }
     }
+
+    public int contarEstudiantes() {
+        int contador = 0;
+        for (Usuario asistente : this.asistentes) {
+            if (asistente.esEstudiante()) { // Delegamos la lógica al objeto Usuario
+                contador++;
+            }
+        }
+        return contador;
+    }
+
+    public void mostrarEstadisticas() {
+        System.out.println("\n=== ESTADÍSTICAS DE LA TRANSMISIÓN ===");
+        System.out.println("Título: " + this.titulo);
+        System.out.println("Profesor: " + this.profesor.getNombre());
+        System.out.println("Total de asistentes: " + this.asistentes.size());
+        System.out.println("Total de mensajes: " + this.mensajes.size());
+        System.out.println("Estudiantes conectados: " + this.contarEstudiantes());
+
+        System.out.println("\n=== MENSAJES ===");
+        for(Mensaje mensaje : this.mensajes){
+            mensaje.mostrarMensajes();
+        }
+    }
 }

@@ -26,4 +26,8 @@ class Mensaje {
        return texto;
     }
 
+    public void mostrarMensajes() {
+        System.out.println(this.usuario.getNombre() + ": " + this.texto);
+    }
+
 }

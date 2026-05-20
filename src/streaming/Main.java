@@ -43,7 +43,7 @@ public class Main {
         
         // Mostrar estadísticas usando Stream API
         System.out.println();
-        StatsService.mostrarEstadisticas(transmision);
+        transmision.mostrarEstadisticas();
         
         // Filtrar y mostrar solo estudiantes
         System.out.println();

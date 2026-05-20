@@ -1,1 +1,4 @@
 # F02-StreamingParadigmas
+Las clases AttendanceComponent, ChatComponent y NotificationComponent son 100% POO, aunque se usen para manejar eventos, estas clases usan objetos, métodos y son instanciadas.
+
+La clase StatsService no es POO puro, ya que usa el paradigma procedimental al inicio al dar instrucciones secuenciales a la maquina para imprimir las estadisticas. Además, no se instancia, asi que se pasan los metodos a la clase transmision que ya contiene los atributos usados por la clase StatsService y así lo hacemos POO puro al usar los metodos y atributos unicamente de un objeto instanciado.

@@ -47,20 +47,15 @@ public class Main {
         
         // Filtrar y mostrar solo estudiantes
         System.out.println();
-        List<Usuario> estudiantes = transmision.getAsistentes()
-                .stream()
-                .filter(u -> "estudiante".equals(u.getRol()))
-                .collect(Collectors.toList());
+        List<Usuario> estudiantes = transmision.obtenerEstudiantes();
         
         System.out.println("\n=== ESTUDIANTES ASISTENTES ===");
-        estudiantes.forEach(e -> System.out.println("- " + e.getNombre()));
+        for(Usuario u : estudiantes){
+            System.out.println("- "+ u.getNombre());
+        }
         
         // Obtener nombres de todos los asistentes
-        List<String> nombres = transmision.getAsistentes()
-                .stream()
-                .map(Usuario::getNombre)
-                .collect(Collectors.toList());
-        
+        List<String> nombres = transmision.obtenerNombres();
         System.out.println("\n=== RESUMEN ===");
         System.out.println("Total de estudiantes: " + estudiantes.size());
         System.out.println("Total de mensajes: " + transmision.getMensajes().size());

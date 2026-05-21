@@ -69,6 +69,24 @@ public class Transmision {
     public List<Mensaje> getMensajes() {
         return mensajes;
     }
+
+    public List<Usuario> obtenerEstudiantes(){
+        List<Usuario> estudiantes = new ArrayList<>();
+        for(Usuario u : asistentes){
+            if(u.getRol().equals("estudiante")){
+                estudiantes.add(u);
+            }
+        }
+        return estudiantes;
+    }
+
+    public List<String> obtenerNombres(){
+        List<String> nombres = new ArrayList<>();
+        for(Usuario u : asistentes){
+            nombres.add(u.getNombre());
+        }
+        return nombres;
+    }
     
     public void finalizarTransmision() {
         activa = false;
